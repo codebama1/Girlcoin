@@ -80,8 +80,8 @@ public:
         consensus.BIP65Height = 918684; // bab3041e8977e0dc3eeff63fe707b92bde1dd449d8efafb248c27c8264cc311a
         consensus.BIP66Height = 811879; // 7aceee012833fa8952f8835d8b1b3ae233cd6ab08fdb27a771d2bd7bdc491894
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
-        consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
-        consensus.nPowTargetSpacing = 2.5 * 60;
+        consensus.nPowTargetTimespan = 1 * 24 * 60 * 60; // 1 day
+        consensus.nPowTargetSpacing = 5 * 60; //5 minutes
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 6048; // 75% of 8064
@@ -143,7 +143,7 @@ public:
         fRequireStandard = true;
         fMineBlocksOnDemand = false;
 
-        chepointData = (CCheckpointData) {
+        checkpointData = (CCheckpointData) {
             {
                 {  0, uint256S("0x23ffe5ca665fcf4180b8ffe7a71c834a424807e433de98c4601fbfc6e6c9c6a4")}
             }
