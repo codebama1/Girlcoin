@@ -207,8 +207,8 @@ public:
 
         genesis = CreateGenesisBlock(1486949366, 471301, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0xd686c51a8ba8b81e4173096785e458253105e1a4d637fd7824893cd2691ee71f"));
-        assert(genesis.hashMerkleRoot == uint256S("0x805d8d176abe872f5cd40b558869a0d25ed02ae471fa33f80185443e5ca9cb40"));
+        assert(consensus.hashGenesisBlock == uint256S("0x23ffe5ca665fcf4180b8ffe7a71c834a424807e433de98c4601fbfc6e6c9c6a4"));
+        assert(genesis.hashMerkleRoot == uint256S("0xfd43d649adcbb88f6a0127dc3d506c0af4e22d87491dcf3bbf6214eecdd3c235"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -302,14 +302,14 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {0, uint256S("530827f38f93b43ed12af0b3ad25a288dc02ed74d6d7857862df51fc56c416f9")},
+                {0, uint256S("23ffe5ca665fcf4180b8ffe7a71c834a424807e433de98c4601fbfc6e6c9c6a4")},
             }
         };
 
         chainTxData = ChainTxData{
             0,
             0,
-            0
+            0.0
         };
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
